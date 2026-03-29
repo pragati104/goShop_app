@@ -28,7 +28,7 @@ export const fetchProducts = async (req: Request, res: Response)=>{
 export const fetchProductBySlug = async (req: Request, res: Response)=>{
     try {
         // Replacing hyphen with space
-        const title = req.params.slug.split("-").join(" ")
+        const title = (req.params.slug as string).split("-").join(" ");
 
         const product = await Product.findOne({title})
         
