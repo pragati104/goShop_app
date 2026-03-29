@@ -22,12 +22,12 @@ const ENV = process.env
 
 // ❌ Fail fast if env missing
 if (!ENV.MONGO_URL) {
-  throw new Error("❌ MONGO_URL is missing in environment variables")
+  throw new Error("❌ MONGO URL is missing in environment variables")
 }
 
 // ✅ DB Connection
 mongoose.connect(ENV.MONGO_URL)
-  .then(() => console.log(`✅ Database connected`))
+  .then(() => console.log(`✅ Databases connected`))
   .catch((err) => {
     console.log(`❌ Database connection failed`, err.message)
   })
