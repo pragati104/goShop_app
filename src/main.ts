@@ -27,7 +27,7 @@ if (!ENV.MONGO_URL) {
 
 // ✅ DB Connection
 mongoose.connect(ENV.MONGO_URL)
-  .then(() => console.log(`✅ Database connected`))
+  .then(() => console.log(`✅ Databases connected`))
   .catch((err) => {
     console.log(`❌ Database connection failed`, err.message)
   })
