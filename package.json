@@ -22,9 +22,7 @@
 		"mongoose": "latest",
 		"morgan": "latest",
 		"stripe": "^20.4.0",
-		"uuid": "^13.0.0"
-	},
-	"devDependencies": {
+		"uuid": "^13.0.0",
 		"@types/bcrypt": "^6.0.0",
 		"@types/cors": "latest",
 		"@types/express": "latest",
