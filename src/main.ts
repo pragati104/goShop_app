@@ -45,7 +45,7 @@ app.post(
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://your-frontend.vercel.app" // 🔁 replace this
+    "https://go-shop-xi.vercel.app"
   ],
   credentials: true
 }))
