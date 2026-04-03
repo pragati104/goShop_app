@@ -141,7 +141,11 @@ export const updateUserProfile = async (req: AuthRequest, res: Response)=>{
         {
             req.body.password = await bcrypt.hash(req.body.password.toString(), 12)
         }
-        const user = await User.findByIdAndUpdate(req.user?.id, req.body)
+        const user = await User.findByIdAndUpdate(
+  req.user?.id,
+  req.body,
+  { new: true }
+);
         
         if(!user)
             throw new Error("User not found")
